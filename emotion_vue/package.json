@@ -1,0 +1,49 @@
+{
+  "name": "emotion_vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@mediapipe/hands": "^0.4.1675469240",
+    "@mediapipe/pose": "^0.5.1675469404",
+    "@tensorflow/tfjs": "^4.22.0",
+    "cannon-es": "^0.20.0",
+    "dat.gui": "^0.7.9",
+    "gsap": "^3.13.0",
+    "leva": "^0.10.0",
+    "lil-gui": "^0.20.0",
+    "locomotive-scroll": "^4.1.4",
+    "pinia": "^3.0.3",
+    "postprocessing": "^6.37.7",
+    "stats.js": "^0.17.0",
+    "three": "^0.168.0",
+    "troika-three-text": "^0.52.4",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/three": "^0.168.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.31.0",
+    "eslint-plugin-vue": "~10.3.0",
+    "globals": "^16.3.0",
+    "postcss": "^8.5.6",
+    "prettier": "3.6.2",
+    "tailwindcss": "^4.1.12",
+    "vite": "^7.0.6",
+    "vite-plugin-vue-devtools": "^8.0.0"
+  }
+}
