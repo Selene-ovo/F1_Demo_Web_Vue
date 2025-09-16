@@ -1,35 +1,67 @@
-# emotion_vue
+# F1 Web Demo
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern Formula 1 themed web application built with Vue 3.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Driver Profiles** - Comprehensive information about F1 drivers
+- **Team Overview** - Detailed team statistics and history
+- **Circuit Guide** - Interactive track information and layouts
+- **Rules & Regulations** - F1 sporting regulations explained
+- **Historical Data** - F1 championship history and records
 
-## Customize configuration
+## Tech Stack
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Vue 3** - Progressive JavaScript framework
+- **Vite** - Next generation frontend tooling
+- **Tailwind CSS** - Utility-first CSS framework
+- **Responsive Design** - Mobile-first approach
 
-## Project Setup
+## Getting Started
 
-```sh
+### Prerequisites
+- Node.js 16+
+- pnpm (recommended)
+
+### Installation
+
+```bash
+# Install dependencies
 pnpm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Start development server
 pnpm dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Build for production
 pnpm build
-```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+# Run linter
 pnpm lint
 ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── pages/          # Page components
+│   ├── ui/             # Reusable UI components
+│   └── common/         # Shared components
+├── assets/
+│   ├── images/         # Static images
+│   └── css/            # Global styles
+├── router/             # Vue Router configuration
+└── views/              # Main view components
+```
+
+## Demo
+
+Visit the live demo: [F1 Web Demo](https://gitea.ewcorp.co/JungHo/Web_Demo_Vue)
+
+## Contributing
+
+This project is developed as a learning exercise. Feedback and suggestions are welcome.
+
+## License
+
+Educational use only.
