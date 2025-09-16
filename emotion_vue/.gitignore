@@ -28,3 +28,17 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Security & Environment
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.crt
+config/production.json
+config/secrets.json
+
+# Claude settings
+.claude/

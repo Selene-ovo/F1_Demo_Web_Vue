@@ -82,7 +82,20 @@
       "Bash(find:*)",
       "Bash(git log:*)",
       "Bash(git add:*)",
-      "Bash(del nul)"
+      "Bash(del nul)",
+      "Bash(git commit:*)",
+      "Bash(netstat:*)",
+      "Bash(tree:*)",
+      "Bash(del \"C:\\emotionwave\\emotion_vue\\src\\components\\ui\\ThreeBackground.vue\")",
+      "Bash(del \"C:\\emotionwave\\emotion_vue\\src\\components\\ui\\TireTrail3D.vue\")",
+      "Bash(ren:*)",
+      "Bash(del \"C:\\emotionwave\\emotion_vue\\src\\components\\sections\\03_Team.vue\")",
+      "Bash(del \"C:\\emotionwave\\emotion_vue\\src\\components\\ui\\02_DriverBackground.vue\")",
+      "Bash(del \"C:\\emotionwave\\emotion_vue\\src\\components\\ui\\ScrollPage.vue\")",
+      "Bash(copy:*)",
+      "Read(//c/emotionwave/emotion_next/**)",
+      "Bash(robocopy:*)",
+      "Bash(xcopy:*)"
     ],
     "deny": [],
     "ask": []

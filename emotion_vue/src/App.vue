@@ -1,7 +1,5 @@
 <template>
   <div id="app" class="app-container">
-    <!-- Three.js Background -->
-    <ThreeBackground />
 
     <!-- Dark Background with Particle Effect -->
     <div class="dark-background">
@@ -26,16 +24,13 @@
 import { RouterView } from 'vue-router'
 import { onMounted } from 'vue'
 import { useSEO } from '@/functions/useSEO'
-import { usePerformance } from '@/functions/usePerformance'
-import AppHeader from '@/common/AppHeader.vue'
-import AppFooter from '@/common/AppFooter.vue'
-import ThreeBackground from '@/home/ThreeBackground.vue'
+import AppHeader from '@/components/common/AppHeader.vue'
+import AppFooter from '@/components/common/AppFooter.vue'
+import { OverlayScrollbars } from 'overlayscrollbars'
+import 'overlayscrollbars/overlayscrollbars.css'
 
 // SEO 설정
 const { setSEO } = useSEO()
-
-// 성능 최적화
-const { isLoading } = usePerformance()
 
 // 기본 SEO 설정
 onMounted(() => {
@@ -45,6 +40,81 @@ onMounted(() => {
     keywords: 'F1, Formula1, EMOLA, 레이싱, 드라이버, 포뮬러원, 챔피언십, 모터스포츠',
     ogImage: '/images/og-emola.jpg'
   })
+
+  // Initialize OverlayScrollbars with round theme and custom positioning
+  OverlayScrollbars(document.body, {
+    className: 'os-theme-round-dark',
+    resize: 'none',
+    sizeAutoCapable: true,
+    clipAlways: true,
+    normalizeRTL: true,
+    paddingAbsolute: false,
+    autoUpdate: null,
+    autoUpdateInterval: 33,
+    updateOnLoad: ['img'],
+    nativeScrollbarsOverlaid: {
+      showNativeScrollbars: false,
+      initialize: true
+    },
+    overflowBehavior: {
+      x: 'scroll',
+      y: 'scroll'
+    },
+    scrollbars: {
+      visibility: 'auto',
+      autoHide: 'never',
+      autoHideDelay: 800,
+      dragScrolling: true,
+      clickScrolling: false,
+      touchSupport: true,
+      snapHandle: false
+    }
+  })
+
+  // Custom positioning with CSS
+  const style = document.createElement('style')
+  style.textContent = `
+    .os-scrollbar-vertical {
+      right: 30px !important;
+      width: 10px !important;
+      top: 38% !important;
+      height: 24% !important;
+    }
+    .os-scrollbar-horizontal {
+      bottom: 30px !important;
+      height: 10px !important;
+      left: 38% !important;
+      width: 24% !important;
+    }
+    .os-scrollbar .os-scrollbar-track {
+      background: rgba(128, 128, 128, 0.2) !important;
+      border-radius: 8px !important;
+    }
+    .os-scrollbar .os-scrollbar-handle {
+      background: white !important;
+      border-radius: 6px !important;
+      min-height: 35px !important;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1) !important;
+      pointer-events: none !important;
+    }
+    .os-scrollbar-track {
+      pointer-events: none !important;
+    }
+  `
+  document.head.appendChild(style)
+
+  // Completely disable scrollbar interactions
+  setTimeout(() => {
+    const scrollbars = document.querySelectorAll('.os-scrollbar, .os-scrollbar-track, .os-scrollbar-handle')
+    scrollbars.forEach(element => {
+      element.style.pointerEvents = 'none'
+    })
+  }, 200)
+
+  // Stop any auto-scroll animations
+  setTimeout(() => {
+    document.documentElement.style.scrollBehavior = 'auto'
+  }, 100)
 })
 </script>
 
@@ -129,7 +199,7 @@ onMounted(() => {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -139,31 +209,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Firefox Scrollbar */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
-}
 </style>
 
 <!-- Global Styles -->

@@ -145,7 +145,7 @@ const subscribeNewsletter = () => {
   background: #1a1a1a;
   border-top: 1px solid #2a2a2a;
   position: relative;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .footer-container {
