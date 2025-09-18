@@ -79,9 +79,6 @@
 
   🔗 Live Preview: https://gitea.ewcorp.co/JungHo/Web_Demo_Vue
 
-  📸 Screenshots
-
-  Coming soon - Screenshots of the application in action
 
   🤝 Contributing
 
